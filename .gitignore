@@ -1,32 +1,16 @@
-# Prerequisites
-*.d
+#include  <iostream>
+using namespace std;
+int main() {
+int* myArray = new int[5]; 
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
 
-# Precompiled Headers
-*.gch
-*.pch
+    for (int i = 0; i < 5; i++) { 
+        myArray[i] = i;
+    }
+    for (int i = 0; i < 5; i++) {  
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+        cout << myArray[i] << " ";
+    }
+    cout << endl;  
+    delete[]myArray;  
+}
